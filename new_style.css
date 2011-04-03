@@ -1,0 +1,83 @@
+#advertisement_bottom,#enhanced_skin_container,#skinSponsorImage,#promotional_ticker_container,#advertisement,.advertisement_double_wide,.advertisement_double_wide_short #google_adwords,#google_companion_ad_div_container,#leaderboard_container,#bottom_leaderboard_container
+{
+	display:none !important;
+	visibility:hidden !important;
+	z-index:-999999999 !important;
+}
+
+body
+{
+	background:#e9eef1 none !important;
+}
+
+html,body,div,h1,h2,h3,h4,h5,h6,p,em,span
+{
+	font-family:Helvetica, Arial, sans-serif !important;
+}
+
+#container
+{
+	background-image:none !important;
+	height:auto !important;
+}
+
+#content.tuner
+{
+	background:#fff url(http://img140.imageshack.us/img140/3540/pandoratop.png) no-repeat center top;
+	border:1px solid #ccc;
+	-webkit-border-radius:5px;
+	position:static;
+	padding-top:4px;
+	width:640px;
+	margin:20px auto;
+}
+
+.tuner #footer
+{
+	width:auto !important;
+	margin:5px 50px !important;
+}
+
+.tuner #footer a
+{
+	color:#888 !important;
+}
+
+.tuner #footer a:hover
+{
+	color:#DDD !important;
+}
+
+#container_a,#container_c,#logo_div,#top_left,#top_right,#bottom,#footer
+{
+	background:#fff none;
+}
+
+#container_c
+{
+	top:80px;
+	width:100%;
+}
+
+#logo_div
+{
+	top:5px;
+}
+
+#search_box,#nav_community
+{
+	top:45px;
+}
+
+#logo,#powered
+{
+	visibility:hidden;
+}
+
+#bottom #footer
+{
+	margin-left:265px;
+	width:auto;
+	padding:15px 0;
+}
+
