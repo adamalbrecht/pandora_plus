@@ -14,22 +14,29 @@
     song_span.innerText = songData.songName;
     setTimeout(function() {
         window.close();
-    }, 5000);
+    }, 7000);
   }
 </script>
 <style>
-   #header { margin-bottom:8px;}
-   #header span {font-size:14px; font-weight:bold;}
+  body { 
+    font-family:Helvetica, Arial, sans-serif;
+    line-height:110%;
+  }
+  #artist_song {
+    font-size:90%;
+  }
+  label {
+    font-weight:bold;
+    margin-right:4px;
+  }
+  img { margin-right:5px; float:left;}
 </style>
 </head>
 <body onLoad="SetupNotification()">
-  <div id="header">
-    <img src="icon18.gif"/>
-    <span>Pandora Plus</span>
-  </div>
-  <span id="debug" style="display:none">songData is null</span>
+  <img src="icon36.gif"/>
   <div id="artist_song">
-    <span id="artist"></span> - <span id="song"></span>
+    <label>Artist:</label><span id="artist"></span><br/>
+    <label>Song:</label><span id="song"></span>
   </div>
 </body>
 </html>
