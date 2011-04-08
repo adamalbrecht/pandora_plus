@@ -8,6 +8,6 @@ $(document).ready(function(){
   notifyEvent = document.createEvent('Event');
   notifyEvent.initEvent('PandoraPlusTrackEvent', true, true);
   Pandora.setEventHandler('SongPlayed', function(songData) {
-    fireNotifyEvent({songName:songData.songName, artistName:songData.artistName, type:'touch'});
-  })
+    fireNotifyEvent({songName:songData.songName, artistName:songData.artistName, artURL:songData.artURL, type:'touch'});
+  });
 });

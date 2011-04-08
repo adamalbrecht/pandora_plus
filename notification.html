@@ -12,6 +12,13 @@
     artist_span.innerText = songData.artistName;
     var song_span = document.getElementById("song");
     song_span.innerText = songData.songName;
+    var artwork = document.getElementById("artwork");
+    if (songData.artURL != null) {
+      artwork.src = songData.artURL;
+    }
+    else {
+      artwork.src = "icon36.gif";
+    }
     setTimeout(function() {
         window.close();
     }, 7000);
@@ -29,11 +36,11 @@
     font-weight:bold;
     margin-right:4px;
   }
-  img { margin-right:5px; float:left;}
+  img { margin-right:5px; float:left; width:36px;}
 </style>
 </head>
 <body onLoad="SetupNotification()">
-  <img src="icon36.gif"/>
+  <img id="artwork" src="icon36.gif"/>
   <div id="artist_song">
     <label>Artist:</label><span id="artist"></span><br/>
     <label>Song:</label><span id="song"></span>

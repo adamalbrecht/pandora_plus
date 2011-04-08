@@ -19,11 +19,12 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,em,span
 {
 	background-image:none !important;
 	height:auto !important;
+  overflow:hidden !important;
 }
 
 #content.tuner
 {
-	background:#fff url(http://img140.imageshack.us/img140/3540/pandoratop.png) no-repeat center top;
+	background:#fff no-repeat center top;
 	border:1px solid #ccc;
 	-webkit-border-radius:5px;
 	position:static;

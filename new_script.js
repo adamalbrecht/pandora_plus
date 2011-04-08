@@ -1,6 +1,10 @@
 var ad_selector = '#advertisement_bottom,#enhanced_skin_container,#skinSponsorImage,#promotional_ticker_container,#advertisement,.advertisement_double_wide,.advertisement_double_wide_short #google_adwords,#google_companion_ad_div_container,#leaderboard_container, #bottom_leaderboard_container';
 $(ad_selector).remove();
 
+$(document).ready(function(){
+  $("#content.tuner").css("background-image", "url('" + chrome.extension.getURL('bg.png') + "')");
+});
+
 function inject_js_script(link, id) {
   var script = document.createElement('script');
   script.setAttribute("id", id);
