@@ -9,6 +9,8 @@
         }
         else if (request.message_type == "song") {
           songData = JSON.parse(request.song_data);
+          /* songData.artistName = convert_special_characters(songData.artistName); */
+          /* songData.songName = convert_special_characters(songData.songName); */
           var notification = webkitNotifications.createHTMLNotification("notification.html");
           notification.show();
         }
@@ -26,5 +28,9 @@
         "PandoraPlus: " + message
       );
       notification.show();
+    }
+
+    function convert_special_characters(the_string) {
+      return the_string.replace("&amp;", "&");
     }
   </script>

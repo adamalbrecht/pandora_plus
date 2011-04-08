@@ -1,6 +1,6 @@
 {
   "name": "Pandora Plus",
-  "version": "0.1",
+  "version": "0.5",
   "description": "Improves the Pandora.com user experience.",
   "icons": { "48": "icon48.gif",
 	          "128": "icon128.gif" },
@@ -9,8 +9,8 @@
   "content_scripts": [
     {
       "matches": ["*://*.pandora.com/*"],
-      "css": ["new_style.css"],
-      "js":["jquery-1.5.2.min.js","new_script.js"]
+      "css": ["pandora_plus_content_style.css"],
+      "js":["jquery-1.5.2.min.js","pandora_plus_content_script.js"]
     }
   ]
 }
