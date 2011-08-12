@@ -1,7 +1,7 @@
 {
   "name": "Pandora Plus",
   "version": "0.5",
-  "description": "Improves the Pandora.com user experience.",
+  "description": "Improves the Pandora.com user experience by removing ads, cleaning up the player, and adding desktop notifications.",
   "icons": { "48": "icon48.gif",
 	          "128": "icon128.gif" },
   "permissions":["*://*.pandora.com/*", "notifications"],
