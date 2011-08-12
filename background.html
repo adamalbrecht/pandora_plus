@@ -2,6 +2,9 @@
   <script src="json2.js"></script>
   <script>
     var songData = null;
+    var songNum = 0;
+    var notificationSlots = 6;
+    ClearLocalStorage();
     chrome.extension.onRequest.addListener(
       function(request, sender, sendResponse) {
         if (request.message_type == "debug") {
@@ -12,7 +15,13 @@
           /* songData.artistName = convert_special_characters(songData.artistName); */
           /* songData.songName = convert_special_characters(songData.songName); */
           var notification = webkitNotifications.createHTMLNotification("notification.html");
-          notification.show();
+          if (HasNotificationBeenShownLately() == false) {
+            notification.show();
+            SaveSongToLocalStorage();
+          }
+          else {
+            DebugMessage("Notification blocked for " + songData.songName);
+          }
         }
       }
     );
@@ -32,5 +41,30 @@
 
     function convert_special_characters(the_string) {
       return the_string.replace("&amp;", "&");
+    }
+
+    function SaveSongToLocalStorage() {
+      if (songData != null && songData != undefined && songData.songName != null) {
+        localStorage["PandoraPlus.Notification" + songNum] = songData.songName;
+        songNum++;
+        if (songNum >= notificationSlots) {
+          songNum = 0;
+        }
+      }
+    }
+
+    function HasNotificationBeenShownLately() {
+      for (var i=0; i<notificationSlots; i++) {
+        if ((localStorage["PandoraPlus.Notification" + i] != null) && (localStorage["PandoraPlus.Notification" + i] == songData.songName)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function ClearLocalStorage() {
+      for (var i=0; i<notificationSlots; i++) {
+        localStorage["PandoraPlus.Notification" + i] = null;
+      }
     }
   </script>
