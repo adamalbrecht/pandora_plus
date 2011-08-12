@@ -1,6 +1,10 @@
 var ad_selector = '#advertisement_bottom,#enhanced_skin_container,#skinSponsorImage,#promotional_ticker_container,#advertisement,.advertisement_double_wide,.advertisement_double_wide_short #google_adwords,#google_companion_ad_div_container,#leaderboard_container, #bottom_leaderboard_container';
 $(ad_selector).remove();
 
+if ($("#container #tuner #TunerContainer #radio").length > 0) {
+  $("#container").addClass("fv");
+}
+
 $(document).ready(function(){
   $("#content.tuner").css("background-image", "url('" + chrome.extension.getURL('bg.png') + "')");
 });

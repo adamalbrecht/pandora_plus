@@ -10,19 +10,19 @@ body
 	background:#e9eef1 none !important;
 }
 
-html,body,div,h1,h2,h3,h4,h5,h6,p,em,span
+#container.fv, .fv div,.fv h1,.fv h2, .fv h3, .fv h4,.fv h5,.fv h6,.fv p,.fv em,.fv span
 {
 	font-family:Helvetica, Arial, sans-serif !important;
 }
 
-#container
+#container.fv
 {
 	background-image:none !important;
 	height:auto !important;
   overflow:hidden !important;
 }
 
-#content.tuner
+.fv #content.tuner
 {
 	background:#fff no-repeat center top;
 	border:1px solid #ccc;
@@ -33,49 +33,49 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,em,span
 	margin:20px auto;
 }
 
-.tuner #footer
+.fv .tuner #footer
 {
 	width:auto !important;
 	margin:5px 50px !important;
 }
 
-.tuner #footer a
+.fv .tuner #footer a
 {
 	color:#888 !important;
 }
 
-.tuner #footer a:hover
+.fv .tuner #footer a:hover
 {
 	color:#DDD !important;
 }
 
-#container_a,#container_c,#logo_div,#top_left,#top_right,#bottom,#footer
+.fv #container_a, .fv #container_c,.fv #logo_div,.fv #top_left,.fv #top_right,.fv #bottom,.fv #footer
 {
 	background:#fff none;
 }
 
-#container_c
+.fv #container_c
 {
 	top:80px;
 	width:100%;
 }
 
-#logo_div
+.fv #logo_div
 {
 	top:5px;
 }
 
-#search_box,#nav_community
+.fv #search_box,.fv #nav_community
 {
 	top:45px;
 }
 
-#logo,#powered
+.fv #logo,.fv #powered
 {
 	visibility:hidden;
 }
 
-#bottom #footer
+.fv #bottom .fv #footer
 {
 	margin-left:265px;
 	width:auto;
